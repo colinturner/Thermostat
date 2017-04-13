@@ -4,48 +4,39 @@
     <title> Thermostat </title>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
   </head>
 
   <body>
+    <div class="container">
+      <section>
+        <div class="title">
+          <h1>Current temperature: <span id="current-temperature">20</span></h1>
+        </div>
+        <form id="select-city">
+          <input id="current-city" type="text" placeholder="Enter a city"></input>
+          <!-- <input type="submit"></input> -->
+          <button type="submit">Submit</button>
+        </form>
+      </section>
 
-    <section>
-<!--       <h1>Current outdoor temperature: <span id="current-temperature"></span></h1>
-      <select id="current-city">
-        <option value="london">London</option>
-        <option value="newyork">New York</option>
-        <option value="paris">Paris</option>
-        <option value="tokyo">Tokyo</option>
-      </select>
-    </section> -->
+      <h1 id='temp'> Indoor temp </h1>
+      <h4>Energy Usage: <span id='energy-display'></span> </h4>
 
-    <section>
-      <h1>Current temperature: <span id="current-temperature">20</span></h1>
-      <form id="select-city">
-        <input id="current-city" type="text" placeholder="Enter a city"></input>
-        <input type="submit"></input>
-      </form>
-    </section>
+        <div class="toggle-temp">
+          <button type='button' id='up'>Increase temperature</button>
+          <button type='button' id='down'>Decrease temperature</button>
+        </div>
 
-    <h1 id='temp'> Indoor temp </h1>
-      <h4 id='energy-display'> Energy Usage: </h4>
+        <div class="toggle-power">
+          <p>Toggle PowerSave</p>
+          <button type='button' id='powerSave'>ON</button>
+        </div>
 
-      <div>
-        <button type='button' id='up'>Increase temperature</button>
-        <button type='button' id='down'>Decrease temperature</button>
-      </div>
-
-      <div>
-        <p>Toggle PowerSave</p>
-        <button type='button' id='powerSave'>ON</button>
-      </div>
-
-      <div>
-        <button type='button' id='reset'>Reset temperature</button>
-      </div>
-
-      <div>
-        <button type='button' id='energyUsage'>Energy Usage</button>
-      </div>
+        <div class="toggle-reset-and-eu">
+          <button type='button' id='reset'>Reset temperature</button>
+        </div>
+    </div>
 
       <script src="./src/Thermostat.js"></script>
       <script src="interface.js"></script>

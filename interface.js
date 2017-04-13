@@ -57,6 +57,7 @@ $(document).ready(function(){
   function updateTemp() {
     $('#temp').text(thermo.temp);
     $('#temp').attr('class', thermo.energyUsage());
+    $('#energy-display').text(thermo.energyUsage());
   }
 
 
