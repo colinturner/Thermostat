@@ -20,12 +20,12 @@ Thermostat.prototype.switchPowerSave = function(){
   this.powerSave ? (this.powerSave = false) : (this.powerSave = true);
 };
 
-Thermostat.prototype.up = function(degree) {
+Thermostat.prototype.up = function(degree = 1) {
   var maxTemp = this.powerSave ? MAX_TEMP_POWER_SAVE_ON : MAX_TEMP_POWER_SAVE_OFF;
   (this.temp + degree <= maxTemp) ? (this.temp += degree) : (this.temp = maxTemp);
 };
 
-Thermostat.prototype.down = function(degree){
+Thermostat.prototype.down = function(degree = 1){
   if (this.temp - degree >= MIN_TEMP) {
     this.temp -= degree;
   } else {
